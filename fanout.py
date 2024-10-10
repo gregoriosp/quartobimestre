@@ -8,12 +8,12 @@ channel = connection.channel()
 channel.exchange_declare(exchange='minha_fanout_exchange', exchange_type='fanout')
 
 # Criar as duas filas (queues)
-channel.queue_declare(queue='fila_1')
-channel.queue_declare(queue='fila_2')
+#channel.queue_declare(queue='fila_1')
+#channel.queue_declare(queue='fila_2')
 
 # Vincular as filas à exchange 'fanout'
-channel.queue_bind(exchange='minha_fanout_exchange', queue='fila_1')
-channel.queue_bind(exchange='minha_fanout_exchange', queue='fila_2')
+#channel.queue_bind(exchange='minha_fanout_exchange', queue='fila_1')
+#channel.queue_bind(exchange='minha_fanout_exchange', queue='fila_2')
 
 # Enviar uma mensagem para a exchange
 message = "Mensagem para as filas"
